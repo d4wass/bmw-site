@@ -1,9 +1,14 @@
 import React from 'react';
-import './App.css';
+import Footer from 'components/organisms/Footer';
+import PageTemplate from './template/PageTemplate';
+import HeaderSection from './components/organisms/HeaderSection';
+import InfoSection from './components/organisms/InfoSection';
 
 const App = () => (
-  <div>
-    hello World<p>2</p>
-  </div>
+  <PageTemplate>
+    <HeaderSection />
+    <InfoSection />
+    <Footer />
+  </PageTemplate>
 );
 export default App;
