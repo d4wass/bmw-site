@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
-import React from 'react';
-import PropTypes from 'prop-types';
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`
   font-family: 'Cairo', sans-serif;
   font-size: 2.4rem;
   font-weight: ${({ theme }) => theme.font.weight.bold};
@@ -15,7 +13,7 @@ const StyledTitle = styled.h1`
       font-size: 2rem;
       font-weight: 300;
       margin-bottom: 30px;
-    `}
+    `};
 
   ${({ header }) =>
     header &&
@@ -24,24 +22,22 @@ const StyledTitle = styled.h1`
       color: ${({ theme }) => theme.colors.white};
       line-height: 5.6rem;
       padding: 17px 0;
+    `};
+
+  ${({ small }) =>
+    small &&
+    css`
+      font-size: 1.2rem;
+      margin: 6px;
+    `}
+
+  ${({ form }) =>
+    form &&
+    css`
+      font-size: 2rem;
+      font-weight: ${({ theme }) => theme.font.weight.semiBold};
+      margin-bottom: 30px;
     `}
 `;
-
-const Title = ({ children, footer, header }) => (
-  <StyledTitle footer={footer} header={header}>
-    {children}
-  </StyledTitle>
-);
-
-Title.propTypes = {
-  children: PropTypes.string.isRequired,
-  footer: PropTypes.bool,
-  header: PropTypes.bool,
-};
-
-Title.defaultProps = {
-  footer: false,
-  header: false,
-};
 
 export default Title;

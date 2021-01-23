@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
-import React from 'react';
-import PropTypes from 'prop-types';
 
-const StyledParagraph = styled.p`
+const Paragraph = styled.p`
   font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
   font-weight: ${({ theme }) => theme.font.weight.regular};
@@ -23,22 +21,5 @@ const StyledParagraph = styled.p`
       color: ${({ theme }) => theme.colors.footer.links};
     `}
 `;
-
-const Paragraph = ({ children, footer, info }) => (
-  <StyledParagraph footer={footer} info={info}>
-    {children}
-  </StyledParagraph>
-);
-
-Paragraph.propTypes = {
-  children: PropTypes.string.isRequired,
-  footer: PropTypes.bool,
-  info: PropTypes.bool,
-};
-
-Paragraph.defaultProps = {
-  footer: false,
-  info: false,
-};
 
 export default Paragraph;

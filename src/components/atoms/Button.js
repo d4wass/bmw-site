@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import React from 'react';
-import PropTypes from 'prop-types';
 
-const StyledButton = styled.button`
+const Button = styled.button`
   font-family: 'Cairo', sans-serif;
   font-size: 1.4rem;
   font-weight: ${({ theme }) => theme.font.weight.semiBold};
@@ -17,11 +15,5 @@ const StyledButton = styled.button`
 
   ${({ theme }) => theme.letterSpacingMixin(50)}
 `;
-
-const Button = ({ children }) => <StyledButton>{children}</StyledButton>;
-
-Button.propTypes = {
-  children: PropTypes.string.isRequired,
-};
 
 export default Button;
