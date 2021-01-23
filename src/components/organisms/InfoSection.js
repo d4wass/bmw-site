@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import InfoItem from 'components/molecules/InfoSection/InfoItem';
-import InfoImages from 'components/molecules/InfoSection/InfoImages';
+import InfoAreoSection from 'components/molecules/InfoSections/InfoAreoSection';
+import InfoItem from 'components/molecules/InfoSections/InfoItem';
+import InfoImages from 'components/molecules/InfoSections/InfoImages';
 import { ReactComponent as Fuel } from 'assets/InfoIcon/Fuel.svg';
+import MasornyGallery from '../molecules/InfoSections/MasornyGallery';
 
 const infoContent = [
   {
@@ -44,7 +46,7 @@ const StyledTitle = styled.h2`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.colors.black};
   line-height: 2.8rem;
-  margin-top: 25px;
+  margin: 30px 0;
 `;
 
 const InfoSection = () => (
@@ -57,6 +59,9 @@ const InfoSection = () => (
         <InfoItem title={item.title} content={item.content} />
       ))}
     </StyledContentWrapper>
+    <InfoImages reverse />
+    <InfoAreoSection />
+    <MasornyGallery />
   </StyledWrapper>
 );
 

@@ -8,22 +8,36 @@ const StyledSubtitle = styled.h2`
   font-weight: ${({ theme }) => theme.font.weight.light};
   color: ${({ theme }) => theme.colors.subtitle};
 
-  ${({ theme }) => theme.letterSpacingMixin(0)}
   ${({ header }) =>
     header &&
     css`
       font-family: 'Roboto', sans-serif;
       text-transform: uppercase;
     `}
+
+  ${({ info }) =>
+    info &&
+    css`
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 15px;
+    `}
 `;
 
-const Subtitle = ({ children, header }) => (
-  <StyledSubtitle header={header}>{children}</StyledSubtitle>
+const Subtitle = ({ children, header, info }) => (
+  <StyledSubtitle header={header} info={info}>
+    {children}
+  </StyledSubtitle>
 );
 
 Subtitle.propTypes = {
   children: PropTypes.string.isRequired,
-  header: PropTypes.bool.isRequired,
+  header: PropTypes.bool,
+  info: PropTypes.bool,
+};
+
+Subtitle.defaultProps = {
+  header: false,
+  info: false,
 };
 
 export default Subtitle;
