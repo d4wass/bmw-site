@@ -8,6 +8,10 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    width: 339px;
+  }
 `;
 
 const StyledList = styled.ul`

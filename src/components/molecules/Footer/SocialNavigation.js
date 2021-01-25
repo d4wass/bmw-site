@@ -11,6 +11,13 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px #bebebe solid;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 35px 0;
+  }
 `;
 
 const StyledList = styled.ul`
@@ -18,6 +25,10 @@ const StyledList = styled.ul`
   align-items: center;
   list-style: none;
   margin-bottom: 30px;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 0;
+  }
 `;
 const StyledListItem = styled.li`
   margin-right: 20px;

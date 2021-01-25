@@ -23,6 +23,12 @@ const Title = styled.h1`
         line-height: 1.5;
         margin: 25px 0;
       `}
+
+    ${({ footer }) =>
+      footer &&
+      css`
+        margin: 0 30px 0 0;
+      `};
   }
 
   ${({ footer }) =>

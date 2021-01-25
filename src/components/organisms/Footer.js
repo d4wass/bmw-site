@@ -23,10 +23,27 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 90px 32px 30px 32px;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    padding: 0 278px;
+  }
 `;
 
-const StyledSection = styled.section`
+const StyledSection = styled.div`
   padding-top: 90px;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: flex;
+    justify-content: flex-start;
+    padding: 60px 0 120px 0;
+
+    ${({ copyright }) =>
+      copyright &&
+      css`
+        padding: 17px 278px;
+      `}
+  }
+
   ${({ copyright }) =>
     copyright &&
     css`
