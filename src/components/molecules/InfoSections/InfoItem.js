@@ -34,6 +34,15 @@ const StyledTitle = styled.h3`
   font-family: 'Cairo', sans-serif;
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.colors.black};
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    width: 200px;
+  }
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  line-height: 2.4;
+  max-width: 65vw;
 `;
 
 const InfoItem = ({ title, content }) => (
@@ -42,7 +51,7 @@ const InfoItem = ({ title, content }) => (
     <StyledSpan>
       <StyledSpan inner />
     </StyledSpan>
-    <Paragraph>{content}</Paragraph>
+    <StyledParagraph>{content}</StyledParagraph>
   </StyledWrapper>
 );
 

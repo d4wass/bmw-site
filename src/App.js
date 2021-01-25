@@ -8,8 +8,10 @@ import FormSection from './components/organisms/FormSection';
 const App = () => (
   <PageTemplate>
     <HeaderSection />
-    <InfoSection />
-    <FormSection />
+    <main>
+      <InfoSection />
+      <FormSection />
+    </main>
     <Footer />
   </PageTemplate>
 );

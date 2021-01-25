@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from 'components/atoms/Title';
-import Paragraph from 'components/atoms/Paragraph';
+// import Paragraph from 'components/atoms/Paragraph';
+import Subtitle from 'components/atoms/SubTitle';
 
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px;
 `;
 
 const StyledTitle = styled(Title)`
@@ -17,11 +19,11 @@ const FormSectionContent = () => (
     <StyledTitle>
       UMÓW JAZDĘ PRÓBNĄ <Title small>BMW iX</Title>
     </StyledTitle>
-    <Paragraph>Zachęcamy do ograniczenia poruszania się i pozostania w domu. </Paragraph>
+    <Subtitle>Zachęcamy do ograniczenia poruszania się i pozostania w domu. </Subtitle>
     <br />
-    <Paragraph>
+    <Subtitle>
       Jeśli jednak jazda testowa okaże się niezbędna prosimy o wypełnienie poniższego formularza.
-    </Paragraph>
+    </Subtitle>
   </StyledWrapper>
 );
 

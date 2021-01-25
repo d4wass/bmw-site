@@ -6,6 +6,25 @@ const Title = styled.h1`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.colors.black};
 
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    ${({ header }) =>
+      header &&
+      css`
+        font-size: 6.4rem;
+        text-transform: uppercase;
+        padding: 36px 0;
+      `}
+
+    ${({ info }) =>
+      info &&
+      css`
+        font-size: 3.6rem;
+        width: 300px;
+        line-height: 1.5;
+        margin: 25px 0;
+      `}
+  }
+
   ${({ footer }) =>
     footer &&
     css`
@@ -22,7 +41,16 @@ const Title = styled.h1`
       color: ${({ theme }) => theme.colors.white};
       line-height: 5.6rem;
       padding: 17px 0;
+      width: 50vw;
     `};
+
+  ${({ info }) =>
+    info &&
+    css`
+      width: 60vw;
+      line-height: 2.8rem;
+      margin: 25px 0;
+    `}
 
   ${({ small }) =>
     small &&
