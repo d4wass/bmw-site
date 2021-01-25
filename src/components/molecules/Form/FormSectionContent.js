@@ -8,6 +8,10 @@ const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 90px;
+  }
 `;
 
 const StyledTitle = styled(Title)`

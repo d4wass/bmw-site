@@ -24,6 +24,11 @@ const Input = styled.input`
       padding: 10px 20px 10px 40px;
       font-size: 1.2rem;
     `}
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
 `;
 
 export default Input;

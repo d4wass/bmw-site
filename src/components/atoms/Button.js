@@ -12,6 +12,7 @@ const Button = styled.button`
   padding: 20px 50px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
   ${({ theme }) => theme.letterSpacingMixin(50)}
 `;

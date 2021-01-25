@@ -30,7 +30,7 @@ const StyledGridWrapper = styled.div`
 const StyledImage = styled.div`
   background-image: ${({ image }) => `url(${image})`};
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
