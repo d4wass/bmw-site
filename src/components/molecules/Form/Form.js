@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Input from 'components/atoms/Input';
 import Button from 'components/atoms/Button';
 import RadioButton from 'components/atoms/RadioButton';
-import Title from 'components/atoms/Title';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
@@ -82,7 +81,6 @@ const ContactForm = ({ handleSend }) => {
     >
       {({ values, handleChange, handleBlur, isSubmitting, errors, touched }) => (
         <>
-          <Title form>Wypełnij formularz swoimi danymi.</Title>
           <Form>
             <StyledWrapper>
               <RadioButton id="male" checked={isMale} handleButton={handleRadioMale}>

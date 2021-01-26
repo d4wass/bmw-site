@@ -4,6 +4,7 @@ import FormImage from 'components/molecules/Form/FormImage';
 import FormSectionContent from 'components/molecules/Form/FormSectionContent';
 import Form from 'components/molecules/Form/Form';
 import ThanksInfo from 'components/molecules/ThanksInfo';
+import Title from 'components/atoms/Title';
 import gsap from 'gsap';
 
 const StyledWrapper = styled.div`
@@ -67,6 +68,7 @@ const FromSection = () => {
       <FormImage />
       <StyledWrapper form id="form">
         <FormSectionContent />
+        <Title form>Wypełnij formularz swoimi danymi.</Title>
         <Form handleSend={handleSend} />
       </StyledWrapper>
       <FormImage second />

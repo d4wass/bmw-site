@@ -5,17 +5,21 @@ import FooterNavigation from 'components/molecules/Footer/FooterNavigation';
 
 const footerNavLinks = {
   customer: [
-    'Centrum Obsługi Klienta BMW',
-    'Znajdź dealera BMW',
-    'Pobierz cenniki / broszury',
-    'Często zadawane pytania',
+    { content: 'Centrum Obsługi Klienta BMW', id: 1 },
+    { content: 'Znajdź dealera BMW', id: 2 },
+    { content: 'Pobierz cenniki / broszury', id: 3 },
+    { content: 'Często zadawane pytania', id: 4 },
   ],
-  aboutUs: ['Informacje prasowe', 'BMW Polska', 'Kariera'],
+  aboutUs: [
+    { content: 'Informacje prasowe', id: 1 },
+    { content: 'BMW Polska', id: 2 },
+    { content: 'Kariera', id: 3 },
+  ],
   legalInfo: [
-    'Mapa serwisu',
-    'Nota prawna / Prywatność',
-    'Polityka cookie',
-    'Warunki korzystania z MyBMW',
+    { content: 'Mapa serwisu', id: 1 },
+    { content: 'Nota prawna / Prywatność', id: 2 },
+    { content: 'Polityka cookie', id: 3 },
+    { content: 'Warunki korzystania z MyBMW', id: 3 },
   ],
 };
 

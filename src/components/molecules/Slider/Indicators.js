@@ -51,7 +51,7 @@ const Indicators = ({ slides, handleChange, current }) => {
       <StyledIndicator current={current} />
       <StyledIndicatorsItems items={slides}>
         {slides.map((slide, index) => (
-          <StyledIndicatorItem onClick={() => handleChange(index)} />
+          <StyledIndicatorItem onClick={() => handleChange(index)} key={slide.id} />
         ))}
       </StyledIndicatorsItems>
     </StyledWrapper>

@@ -65,7 +65,7 @@ const StyledInput = styled.input`
 const RadioButton = ({ children, id, checked, handleButton }) => {
   return (
     <StyledWrapper>
-      <StyledInput id={id} type="radio" checked={checked} onClick={handleButton} />
+      <StyledInput id={id} type="radio" checked={checked} onChange={handleButton} />
       <StyledLabel htmlFor={id}>{children}</StyledLabel>
     </StyledWrapper>
   );

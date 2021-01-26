@@ -35,14 +35,14 @@ const StyledTitle = styled(Title)`
   padding-bottom: 4vh;
 `;
 
-const SocialNavigation = ({ title, items }) => (
+const FooterNavigation = ({ title, items }) => (
   <StyledWrapper>
     <StyledTitle footer>{title}</StyledTitle>
     <StyledList>
       {items.map((item) => (
-        <StyledListItem>
+        <StyledListItem key={item.id}>
           <Paragraph footer as={StyledAnchor}>
-            {item}
+            {item.content}
           </Paragraph>
         </StyledListItem>
       ))}
@@ -50,9 +50,9 @@ const SocialNavigation = ({ title, items }) => (
   </StyledWrapper>
 );
 
-SocialNavigation.propTypes = {
+FooterNavigation.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default SocialNavigation;
+export default FooterNavigation;

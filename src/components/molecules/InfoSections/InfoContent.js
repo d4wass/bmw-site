@@ -73,7 +73,7 @@ const InfoSection = () => (
       </Title>
       <StyledInfoContentWrapper>
         {infoContent.map((item) => (
-          <InfoItem title={item.title} content={item.content} />
+          <InfoItem title={item.title} content={item.content} key={item.title} />
         ))}
       </StyledInfoContentWrapper>
     </StyledContentWrapper>
