@@ -19,7 +19,7 @@ const footerNavLinks = {
     { content: 'Mapa serwisu', id: 1 },
     { content: 'Nota prawna / Prywatność', id: 2 },
     { content: 'Polityka cookie', id: 3 },
-    { content: 'Warunki korzystania z MyBMW', id: 3 },
+    { content: 'Warunki korzystania z MyBMW', id: 4 },
   ],
 };
 
