@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const StyledWrapper = styled.div`
   position: absolute;
   width: 20%;
-  left: 22%;
+  left: 26%;
   bottom: 5%;
   z-index: 2;
 

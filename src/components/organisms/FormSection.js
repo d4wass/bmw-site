@@ -9,7 +9,7 @@ import gsap from 'gsap';
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: ${({ form }) => (form ? '0' : '60px 32px')};
+  padding: ${({ form }) => (form ? '0 10vw' : '0')};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     flex-direction: row-reverse;

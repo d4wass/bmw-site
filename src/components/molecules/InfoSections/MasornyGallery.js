@@ -59,7 +59,6 @@ const StyledImage = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
-    /* background-size: contain; */
 
     ${({ span1 }) =>
       span1 &&
@@ -88,16 +87,14 @@ const StyledImage = styled.div`
   }
 `;
 
-const MasornyGallery = () => {
-  return (
-    <StyledGridWrapper>
-      <StyledImage span1 image={imageGallery} imageDesktop={imageGalleryDesktop} />
-      <StyledImage span2 image={imageGallery4} imageDesktop={imageGalleryDesktop4} />
-      <StyledImage span3 image={imageGallery3} imageDesktop={imageGalleryDesktop2} />
-      <StyledImage span4 image={imageGallery1} imageDesktop={imageGalleryDesktop3} />
-      <StyledImage span4 image={imageGallery2} imageDesktop={imageGalleryDesktop1} />
-    </StyledGridWrapper>
-  );
-};
+const MasornyGallery = () => (
+  <StyledGridWrapper id="gallery">
+    <StyledImage span1 image={imageGallery} imageDesktop={imageGalleryDesktop} />
+    <StyledImage span2 image={imageGallery4} imageDesktop={imageGalleryDesktop4} />
+    <StyledImage span3 image={imageGallery3} imageDesktop={imageGalleryDesktop2} />
+    <StyledImage span4 image={imageGallery1} imageDesktop={imageGalleryDesktop3} />
+    <StyledImage span4 image={imageGallery2} imageDesktop={imageGalleryDesktop1} />
+  </StyledGridWrapper>
+);
 
 export default MasornyGallery;

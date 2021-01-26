@@ -171,6 +171,9 @@ const Navigation = () => {
 
   const handleClick = (section) => {
     tl.to(window, { duration: 0.5, scrollTo: { y: `#${section}` } });
+    if (!isDesktop) {
+      setVisible(false);
+    }
   };
 
   return (
@@ -192,11 +195,15 @@ const Navigation = () => {
             </StyledListItem>
             {!isDesktop && (
               <StyledListItem>
-                <StyledListItemLink>GALERIA</StyledListItemLink>
+                <StyledListItemLink onClick={() => handleClick('gallery')}>
+                  GALERIA
+                </StyledListItemLink>
               </StyledListItem>
             )}
           </StyledList>
-          {!isDesktop && <StyledButton>Umów jazdę próbną</StyledButton>}
+          {!isDesktop && (
+            <StyledButton onClick={() => handleClick('form')}>Umów jazdę próbną</StyledButton>
+          )}
         </StyledListWrapper>
       </StyledContentWrapper>
       <StyledContentWrapper navSubtitle>

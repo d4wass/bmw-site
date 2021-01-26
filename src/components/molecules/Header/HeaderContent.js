@@ -28,13 +28,21 @@ const StyledWrapper = styled.div`
   }
 `;
 
+const StyledWrapperInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 40%;
+`;
+
 const StyledImage = styled.img`
   max-height: 15%;
-  width: auto;
+  width: 15%;
+  margin-bottom: 20px;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    height: 20%;
-    width: auto;
+    height: 13%;
+    width: 8%;
   }
 `;
 
@@ -74,7 +82,7 @@ const HeaderContent = () => {
 
   return (
     <StyledWrapper>
-      <div>
+      <StyledWrapperInner>
         <StyledImage src={ILogo} />
         <StyledTitle ref={title} header>
           Nowe BMW iX
@@ -82,7 +90,7 @@ const HeaderContent = () => {
         <StyledSubTitle ref={subtitle} header>
           Pionier nowej ery.
         </StyledSubTitle>
-      </div>
+      </StyledWrapperInner>
       <StyledButtonWrapper>
         <StyledButton header onClick={handleClick}>
           Umów jazdę próbną

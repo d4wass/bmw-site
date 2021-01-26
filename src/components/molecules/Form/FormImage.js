@@ -31,14 +31,20 @@ const StyledImage = styled.img`
   z-index: 1;
   height: 30vh;
   width: auto;
-  left: ${({ second }) => (second ? '25px' : 0)};
+  left: ${({ second }) => (second ? 'none' : '-33%')};
+  right: ${({ second }) => second && 0};
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    left: ${({ second }) => (second ? '-55px' : '-26px')};
+    height: 50%;
+  }
 `;
 
 const StyledPath = styled(Path)`
   position: absolute;
   z-index: -1;
-  left: 15px;
-  top: 176px;
+  left: -33%;
+  top: 35%;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     left: 80px;
@@ -66,8 +72,8 @@ const StyledDesktopSecondPath = styled(DesktopSecondPath)`
 const StyledSecondPath = styled(SecondPath)`
   position: absolute;
   z-index: -1;
-  left: -138px;
-  top: -180px;
+  right: 0;
+  top: -80%;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     top: -120px;
@@ -76,16 +82,11 @@ const StyledSecondPath = styled(SecondPath)`
 `;
 
 const StyledContentWrapper = styled.div`
-  position: absolute;
-  top: -100px;
-  left: -200px;
+  height: inherit;
+  width: inherit;
+  position: relative;
 
-  ${({ second }) =>
-    second &&
-    css`
-      top: 0;
-      left: 49%;
-    `}
+  ${({ second }) => second && css``}
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     top: 20%;
