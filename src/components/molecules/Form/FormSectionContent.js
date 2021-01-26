@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Title from 'components/atoms/Title';
 import Subtitle from 'components/atoms/SubTitle';
 
@@ -17,10 +17,19 @@ const StyledTitle = styled(Title)`
   display: inline-flex;
 `;
 
+const StyledSpan = styled.span`
+  ${({ small }) =>
+    small &&
+    css`
+      font-size: 1.2rem;
+      margin: 6px;
+    `}
+`;
+
 const FormSectionContent = () => (
   <StyledWrapper>
     <StyledTitle>
-      UMÓW JAZDĘ PRÓBNĄ <Title small>BMW iX</Title>
+      UMÓW JAZDĘ PRÓBNĄ <StyledSpan small>BMW iX</StyledSpan>
     </StyledTitle>
     <Subtitle>Zachęcamy do ograniczenia poruszania się i pozostania w domu. </Subtitle>
     <br />

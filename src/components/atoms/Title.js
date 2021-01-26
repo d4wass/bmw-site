@@ -58,15 +58,8 @@ const Title = styled.h1`
       margin: 25px 0;
     `}
 
-  ${({ small }) =>
-    small &&
-    css`
-      font-size: 1.2rem;
-      margin: 6px;
-    `}
-
-  ${({ form }) =>
-    form &&
+  ${({ formStyle }) =>
+    formStyle &&
     css`
       font-size: 2rem;
       font-weight: ${({ theme }) => theme.font.weight.semiBold};

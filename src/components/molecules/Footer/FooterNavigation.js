@@ -52,7 +52,12 @@ const FooterNavigation = ({ title, items }) => (
 
 FooterNavigation.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.string,
+      id: PropTypes.number,
+    }),
+  ).isRequired,
 };
 
 export default FooterNavigation;

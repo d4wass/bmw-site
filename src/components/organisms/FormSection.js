@@ -10,7 +10,7 @@ import gsap from 'gsap';
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: ${({ form }) => (form ? '0 10vw' : '0')};
+  padding: ${({ formStyle }) => (formStyle ? '0 10vw' : '0')};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     flex-direction: row-reverse;
@@ -18,8 +18,8 @@ const StyledWrapper = styled.div`
     padding: 180px 0;
     position: relative;
 
-    ${({ form }) =>
-      form &&
+    ${({ formStyle }) =>
+      formStyle &&
       css`
         background-color: #fff;
         flex-direction: column;
@@ -66,9 +66,9 @@ const FromSection = () => {
     <StyledWrapper className="form-section" ref={wrapper}>
       {isSend && <ThanksInfo handleClose={handleSend} />}
       <FormImage />
-      <StyledWrapper form id="form">
+      <StyledWrapper formStyle id="form">
         <FormSectionContent />
-        <Title form>Wypełnij formularz swoimi danymi.</Title>
+        <Title formStyle>Wypełnij formularz swoimi danymi.</Title>
         <Form handleSend={handleSend} />
       </StyledWrapper>
       <FormImage second />
