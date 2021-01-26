@@ -10,9 +10,11 @@ const StyledContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: ${({ text }) => (text ? '0' : '8vh 10vw')};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     width: 100%;
+    padding: 0;
 
     ${({ text }) =>
       text &&

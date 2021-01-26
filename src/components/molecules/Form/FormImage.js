@@ -84,7 +84,7 @@ const StyledContentWrapper = styled.div`
     second &&
     css`
       top: 0;
-      left: 127px;
+      left: 49%;
     `}
 
   @media ${({ theme }) => theme.breakpoints.desktop} {

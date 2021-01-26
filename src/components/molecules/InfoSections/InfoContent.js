@@ -30,10 +30,12 @@ const infoContent = [
 ];
 
 const StyledContentWrapper = styled.div`
+  padding: 8vh 10vw;
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: flex;
     flex-direction: column;
     max-width: 50%;
+    padding: 0;
   }
 `;
 

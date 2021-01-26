@@ -22,8 +22,8 @@ const StyledWrapper = styled.div`
 const StyledContentWrapper = styled.div`
   display: ${({ navSubtitle }) => (navSubtitle ? 'none' : 'flex')};
   width: 100%;
-  height: 10vh;
-  padding: 0 10vw;
+  height: 12vh;
+  padding: 3vh 10vw;
 
   ${({ navContent }) =>
     navContent &&
