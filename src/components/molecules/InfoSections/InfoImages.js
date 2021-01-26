@@ -13,12 +13,14 @@ import fourthImageDesk from 'assets/image/foto2_2@2x_Desk.png';
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 270px;
+  height: 80%;
+  width: 100%;
   margin-bottom: ${({ reverse }) => reverse && '60px'};
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    height: 626px;
+    height: 65%;
     flex-direction: row;
+    padding-right: 80px;
   }
 `;
 
@@ -32,8 +34,8 @@ const StyledImageWrapper = styled.div`
     ${({ first }) =>
       first &&
       css`
-        height: ${({ reverse }) => (reverse ? '536px' : '320px')};
-        width: ${({ reverse }) => (reverse ? '536px' : '320px')};
+        height: ${({ reverse }) => (reverse ? '80%' : '50%')};
+        width: ${({ reverse }) => (reverse ? '80%' : '50%')};
         background-size: cover;
         align-self: flex-end;
       `}
@@ -41,8 +43,8 @@ const StyledImageWrapper = styled.div`
     ${({ second }) =>
       second &&
       css`
-        height: ${({ reverse }) => (reverse ? '320px' : '536px')};
-        width: ${({ reverse }) => (reverse ? '320px' : '536px')};
+        height: ${({ reverse }) => (reverse ? '50%' : '80%')};
+        width: ${({ reverse }) => (reverse ? '50%' : '80%')};
         margin-left: 10px;
         background-size: cover;
       `}

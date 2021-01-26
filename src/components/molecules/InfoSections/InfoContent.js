@@ -30,7 +30,11 @@ const infoContent = [
 ];
 
 const StyledContentWrapper = styled.div`
-  padding: 60px 32px 120px;
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -38,7 +42,7 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 4vw;
     height: 100vh;
   }
 `;
@@ -46,18 +50,22 @@ const StyledWrapper = styled.div`
 const StyledInfoContentWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 190px 190px 190px;
     grid-gap: 60px 30px;
     grid-auto-rows: minmax(170px, auto);
     grid-auto-flow: row dense;
   }
 `;
 
+const StyledFuel = styled(Fuel)`
+  align-self: flex-start;
+`;
+
 const InfoSection = () => (
   <StyledWrapper>
     <InfoImages />
     <StyledContentWrapper>
-      <Fuel />
+      <StyledFuel />
       <Title as="h2" info>
         FAKTY O NOWYM BMW iX.
       </Title>

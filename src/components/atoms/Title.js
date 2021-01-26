@@ -20,7 +20,7 @@ const Title = styled.h1`
       css`
         font-size: 3.6rem;
         width: 300px;
-        line-height: 1.5;
+        line-height: 1.2;
         margin: 25px 0;
       `}
 

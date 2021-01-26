@@ -18,7 +18,9 @@ const Subtitle = styled.h2`
   ${({ info }) =>
     info &&
     css`
-      margin-bottom: 15px;
+      @media ${({ theme }) => theme.breakpoints.desktop} {
+        margin-bottom: 30px;
+      }
     `}
 `;
 
