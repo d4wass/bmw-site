@@ -59,7 +59,11 @@ const Indicators = ({ slides, handleChange, current }) => {
 };
 
 Indicators.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+    }),
+  ).isRequired,
   handleChange: PropTypes.func.isRequired,
   current: PropTypes.number.isRequired,
 };
