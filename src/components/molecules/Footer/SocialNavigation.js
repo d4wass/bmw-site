@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 35px 0;
+    padding: 4vh 0;
   }
 `;
 
@@ -24,20 +24,20 @@ const StyledList = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
-  margin-bottom: 30px;
+  margin-bottom: 4vh;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     margin-bottom: 0;
   }
 `;
 const StyledListItem = styled.li`
-  margin-right: 20px;
+  margin-right: 5vw;
   cursor: pointer;
-`;
 
-const SocialIcon = styled(Twitter, Instagram, Facebook, Youtube, Linkedin)`
-  height: 32px;
-  width: 32px;
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    margin-left: 2vw;
+    margin-right: 0;
+  }
 `;
 
 const SocialNavigation = () => (
@@ -45,19 +45,19 @@ const SocialNavigation = () => (
     <Title footer>Dołącz do nas</Title>
     <StyledList>
       <StyledListItem>
-        <SocialIcon as={Facebook} />
+        <Facebook />
       </StyledListItem>
       <StyledListItem>
-        <SocialIcon as={Instagram} />
+        <Instagram />
       </StyledListItem>
       <StyledListItem>
-        <SocialIcon as={Youtube} />
+        <Youtube />
       </StyledListItem>
       <StyledListItem>
-        <SocialIcon as={Linkedin} />
+        <Linkedin />
       </StyledListItem>
       <StyledListItem>
-        <SocialIcon as={Twitter} />
+        <Twitter />
       </StyledListItem>
     </StyledList>
   </StyledWrapper>

@@ -7,15 +7,15 @@ import InfoContent from 'components/molecules/InfoSections/InfoContent';
 const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 70px 0;
+  padding: 19% 0;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    padding: 180px 0;
+    padding: 10% 0;
   }
 `;
 
 const InfoSection = () => (
-  <StyledWrapper>
+  <StyledWrapper id="about">
     <InfoContent />
     <InfoAreoContent />
     <MasornyGallery />

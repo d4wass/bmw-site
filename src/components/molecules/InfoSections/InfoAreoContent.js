@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
 `;
 
 const InfoAreoSection = () => (
-  <StyledWrapper>
+  <StyledWrapper id="aero">
     <InfoImages reverse />
     <StyledContentWrapper>
       <CarIcon />

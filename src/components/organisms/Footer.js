@@ -22,32 +22,32 @@ const footerNavLinks = {
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 90px 32px 30px 32px;
+  padding: 21% 8% 7% 8%;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    padding: 0 278px;
+    padding: 0 15vw;
   }
 `;
 
 const StyledSection = styled.div`
-  padding-top: 90px;
+  padding-top: 25%;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: flex;
     justify-content: flex-start;
-    padding: 60px 0 120px 0;
+    padding: 6vh 0 6vw 0;
 
     ${({ copyright }) =>
       copyright &&
       css`
-        padding: 17px 278px;
+        padding: 2vh 15vw;
       `}
   }
 
   ${({ copyright }) =>
     copyright &&
     css`
-      padding: 17px 0;
+      padding: 2vh 0;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -16,6 +16,7 @@ const StyledWrapper = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     padding: 20px 280px;
+    flex-direction: row-reverse;
   }
 `;
 
@@ -31,6 +32,10 @@ const StyledNavItem = styled.div`
   width: 40px;
   display: flex;
   align-items: center;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: ${({ menuBtn }) => menuBtn && 'none'};
+  }
 `;
 
 const Navbar = () => {
@@ -39,7 +44,7 @@ const Navbar = () => {
 
   return (
     <StyledWrapper>
-      <StyledNavItem>
+      <StyledNavItem menuBtn>
         <Hamburger handleClick={handleClick} isActive={isVisible} />
       </StyledNavItem>
       <StyledNavItem>

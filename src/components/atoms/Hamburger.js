@@ -10,6 +10,10 @@ const StyledButton = styled.button`
   background-color: transparent;
   outline: none;
   display: inline-block;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    display: none;
+  }
 `;
 
 const StyledBox = styled.span`

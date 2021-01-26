@@ -32,8 +32,34 @@ const StyledImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+  ${({ span1 }) =>
+    span1 &&
+    css`
+      grid-column-end: span 6;
+      grid-row-end: span 2;
+    `}
+
+  ${({ span2 }) =>
+    span2 &&
+    css`
+      grid-column-end: span 2;
+    `}
+
+  ${({ span3 }) =>
+    span3 &&
+    css`
+      grid-column-end: span 4;
+    `}
+
+  ${({ span4 }) =>
+    span4 &&
+    css`
+      grid-column-end: span 3;
+    `}
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
+    /* background-size: contain; */
 
     ${({ span1 }) =>
       span1 &&
@@ -60,31 +86,6 @@ const StyledImage = styled.div`
         grid-column-end: span 4;
       `}
   }
-
-  ${({ span1 }) =>
-    span1 &&
-    css`
-      grid-column-end: span 6;
-      grid-row-end: span 2;
-    `}
-
-  ${({ span2 }) =>
-    span2 &&
-    css`
-      grid-column-end: span 2;
-    `}
-
-  ${({ span3 }) =>
-    span3 &&
-    css`
-      grid-column-end: span 4;
-    `}
-
-  ${({ span4 }) =>
-    span4 &&
-    css`
-      grid-column-end: span 3;
-    `}
 `;
 
 const MasornyGallery = () => {

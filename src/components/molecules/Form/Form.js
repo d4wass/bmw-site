@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Input from 'components/atoms/Input';
 import Button from 'components/atoms/Button';
@@ -38,6 +38,33 @@ const ContactForm = ({ handleSend }) => {
       .required('Proszę wpisać numer telefonu'),
   });
 
+  const [isMale, setMale] = useState(false);
+  const [isFemale, setFemale] = useState(false);
+
+  const handleRadioMale = () => {
+    if (!isMale) {
+      setMale(true);
+    } else {
+      setMale(false);
+    }
+    if (!isMale && isFemale) {
+      setMale(true);
+      setFemale(false);
+    }
+  };
+
+  const handleRadioFemale = () => {
+    if (!isFemale) {
+      setFemale(true);
+    } else {
+      setFemale(false);
+    }
+    if (isMale && !isFemale) {
+      setMale(false);
+      setFemale(true);
+    }
+  };
+
   return (
     <Formik
       initialValues={{
@@ -47,9 +74,10 @@ const ContactForm = ({ handleSend }) => {
         phoneNumber: '',
       }}
       validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting, resetForm }) => {
         setSubmitting(false);
         handleSend();
+        resetForm();
       }}
     >
       {({ values, handleChange, handleBlur, isSubmitting, errors, touched }) => (
@@ -57,8 +85,12 @@ const ContactForm = ({ handleSend }) => {
           <Title form>Wypełnij formularz swoimi danymi.</Title>
           <Form>
             <StyledWrapper>
-              <RadioButton id="male">Pan</RadioButton>
-              <RadioButton id="female">Pani</RadioButton>
+              <RadioButton id="male" checked={isMale} handleButton={handleRadioMale}>
+                Pan
+              </RadioButton>
+              <RadioButton id="female" checked={isFemale} handleButton={handleRadioFemale}>
+                Pani
+              </RadioButton>
             </StyledWrapper>
             {errors.name && touched.name && <div>{errors.name}</div>}
             <Input

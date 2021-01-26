@@ -20,6 +20,7 @@ const StyledLabel = styled.label`
   margin-bottom: 0;
   cursor: pointer;
   vertical-align: bottom;
+  user-select: none;
 
   &:before,
   &:after {
@@ -61,10 +62,10 @@ const StyledInput = styled.input`
   }
 `;
 
-const RadioButton = ({ children, id, checked }) => {
+const RadioButton = ({ children, id, checked, handleButton }) => {
   return (
     <StyledWrapper>
-      <StyledInput id={id} type="radio" checked={checked} />
+      <StyledInput id={id} type="radio" checked={checked} onClick={handleButton} />
       <StyledLabel htmlFor={id}>{children}</StyledLabel>
     </StyledWrapper>
   );
@@ -74,6 +75,7 @@ RadioButton.propTypes = {
   children: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
+  handleButton: PropTypes.func.isRequired,
 };
 
 export default RadioButton;

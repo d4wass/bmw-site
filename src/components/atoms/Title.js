@@ -27,7 +27,7 @@ const Title = styled.h1`
     ${({ footer }) =>
       footer &&
       css`
-        margin: 0 30px 0 0;
+        margin: 0 2vh 0 0;
       `};
   }
 

@@ -11,7 +11,7 @@ const Paragraph = styled.p`
     footer &&
     css`
       font-size: 1.2rem;
-      font-weight: ${({ theme }) => theme.font.weight.medium};
+      font-weight: ${({ theme }) => theme.font.weight.bold};
       color: ${({ theme }) => theme.colors.footer.links};
     `}
 `;

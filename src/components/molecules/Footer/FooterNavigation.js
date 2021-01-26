@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
   padding-bottom: 60px;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    width: 339px;
+    width: 25%;
   }
 `;
 
@@ -23,9 +23,16 @@ const StyledListItem = styled.li`
   display: flex;
   cursor: pointer;
 `;
+const StyledAnchor = styled.a`
+  transition: all ease-in 0.3s;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue};
+  }
+`;
 
 const StyledTitle = styled(Title)`
-  padding-bottom: 30px;
+  padding-bottom: 4vh;
 `;
 
 const SocialNavigation = ({ title, items }) => (
@@ -34,7 +41,9 @@ const SocialNavigation = ({ title, items }) => (
     <StyledList>
       {items.map((item) => (
         <StyledListItem>
-          <Paragraph footer>{item}</Paragraph>
+          <Paragraph footer as={StyledAnchor}>
+            {item}
+          </Paragraph>
         </StyledListItem>
       ))}
     </StyledList>

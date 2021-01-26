@@ -31,6 +31,7 @@ const StyledImage = styled.img`
   z-index: 1;
   height: 30vh;
   width: auto;
+  left: ${({ second }) => (second ? '25px' : 0)};
 `;
 
 const StyledPath = styled(Path)`
@@ -46,10 +47,10 @@ const StyledPath = styled(Path)`
 
 const StyledDesktopPath = styled(DesktopPath)`
   position: absolute;
-
+  z-index: -1;
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    top: 330px;
-    right: -100px;
+    top: 450px;
+    right: -280px;
   }
 `;
 
@@ -65,7 +66,7 @@ const StyledDesktopSecondPath = styled(DesktopSecondPath)`
 const StyledSecondPath = styled(SecondPath)`
   position: absolute;
   z-index: -1;
-  left: -100px;
+  left: -138px;
   top: -180px;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -114,7 +115,7 @@ const FormImage = ({ second }) => {
   return (
     <StyledWrapper second={second}>
       <StyledContentWrapper second={second}>
-        <StyledImage src={second ? formSecondImage : formImage} />
+        <StyledImage src={second ? formSecondImage : formImage} second={second} />
         {second ? <StyledSecondPath /> : <StyledPath />}
         {isDesktop && second && <StyledDesktopSecondPath />}
         {isDesktop && !second && <StyledDesktopPath />}

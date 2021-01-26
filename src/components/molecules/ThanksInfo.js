@@ -11,10 +11,14 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: hsla(270, 100%, 0%, 1);
   z-index: 10;
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    background-color: hsla(270, 100%, 0%, 0.5);
+  }
 `;
 
 const StyledTitle = styled(Title)`

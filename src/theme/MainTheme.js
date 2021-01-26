@@ -7,16 +7,6 @@ export const theme = {
       semiBold: 600,
       bold: 700,
     },
-    size: {
-      xxs: '1rem',
-      xs: '1.3rem',
-      s: '1.6rem',
-      m: '2rem',
-      l: '3rem',
-      xl: '5rem',
-      spanSubMobile: '4rem',
-      advenTitleMobile: '2.3rem',
-    },
   },
   colors: {
     footer: {

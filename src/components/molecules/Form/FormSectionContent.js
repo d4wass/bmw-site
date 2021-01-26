@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from 'components/atoms/Title';
-// import Paragraph from 'components/atoms/Paragraph';
 import Subtitle from 'components/atoms/SubTitle';
 
 const StyledWrapper = styled.div`
