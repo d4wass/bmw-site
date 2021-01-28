@@ -38,9 +38,9 @@ const StyledWrapper = styled.div`
 const StyledImage = styled.img`
   position: absolute;
   z-index: 1;
-  height: 30vh;
+  height: 23vh;
   width: auto;
-  left: ${({ second }) => (second ? 'none' : '-33%')};
+  left: ${({ second }) => (second ? 'none' : '-15%')};
   right: ${({ second }) => second && 0};
 
   @media ${({ theme }) => theme.breakpoints.mobile} {

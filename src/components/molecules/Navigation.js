@@ -111,11 +111,7 @@ const StyledListItem = styled.li`
   @media ${({ theme }) => theme.breakpoints.mobile} {
     padding: 6vh 0;
     margin-bottom: 6vh;
-  }
-
-  @media ${({ theme }) => theme.breakpoints.tablet} {
-    padding: 6vh 0;
-    margin-bottom: 6vh;
+    text-align: center;
   }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
