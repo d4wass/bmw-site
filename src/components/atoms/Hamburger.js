@@ -11,6 +11,10 @@ const StyledButton = styled.button`
   outline: none;
   display: inline-block;
 
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    left: ${({ isActive }) => (isActive ? '15vw' : '0')};
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: none;
   }

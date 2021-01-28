@@ -6,7 +6,7 @@ const Title = styled.h1`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.colors.black};
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     ${({ header }) =>
       header &&
       css`

@@ -48,11 +48,12 @@ const StyledImage = styled.img`
 
 const StyledButton = styled(Button)`
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    max-width: 372px;
-    width: 100%;
+    align-items: center;
+    max-width: 375px;
+    width: auto;
     height: 63px;
     font-size: 1.8rem;
-    padding: 15px 90px;
+    padding: 15px 75px;
   }
 `;
 

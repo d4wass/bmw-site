@@ -15,6 +15,10 @@ const StyledWrapper = styled.div`
 
 const StyledTitle = styled(Title)`
   display: inline-flex;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    margin-bottom: 30px;
+  }
 `;
 
 const StyledSpan = styled.span`

@@ -17,6 +17,10 @@ const StyledWrapper = styled.div`
   width: 100%;
   margin-bottom: ${({ reverse }) => reverse && '60px'};
 
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    height: 70vh;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     height: 65%;
     flex-direction: row;
@@ -27,6 +31,27 @@ const StyledWrapper = styled.div`
 const StyledImageWrapper = styled.div`
   background-image: ${({ image }) => `url(${image})`};
   background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    ${({ first }) =>
+      first &&
+      css`
+        height: ${({ reverse }) => (reverse ? '550px' : '360px')};
+        width: ${({ reverse }) => (reverse ? '70vw' : '30vw')};
+        background-size: cover;
+        align-self: flex-end;
+      `}
+
+    ${({ second }) =>
+      second &&
+      css`
+        height: ${({ reverse }) => (reverse ? '360px' : '550px')};
+        width: ${({ reverse }) => (reverse ? '30vw' : '70vw')};
+        margin-left: 10px;
+        background-size: cover;
+      `}
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     background-image: ${({ imageDesk }) => `url(${imageDesk})`};

@@ -12,6 +12,11 @@ const StyledContentWrapper = styled.div`
   align-items: center;
   padding: ${({ text }) => (text ? '0' : '8vh 10vw')};
 
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    padding: ${({ text }) => (text ? '0' : '10vh 15vw')};
+    align-items: flex-start;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     width: 100%;
     padding: 0;

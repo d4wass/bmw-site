@@ -12,11 +12,20 @@ const StyledWrapper = styled.div`
   position: relative;
   height: 250px;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     height: 700px;
     position: absolute;
     left: 70%;
 
+    ${({ second }) =>
+      second &&
+      css`
+        top: 55%;
+        left: 29%;
+      `}
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
     ${({ second }) =>
       second &&
       css`
@@ -33,6 +42,11 @@ const StyledImage = styled.img`
   width: auto;
   left: ${({ second }) => (second ? 'none' : '-33%')};
   right: ${({ second }) => second && 0};
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    left: ${({ second }) => (second ? 'none' : '-120px')};
+    height: 25vh;
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     left: ${({ second }) => (second ? '-55px' : '-26px')};
@@ -74,6 +88,11 @@ const StyledSecondPath = styled(SecondPath)`
   z-index: -1;
   right: 0;
   top: -80%;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    top: -20%;
+    right: -50px;
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     top: -120px;

@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   padding-bottom: 60px;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     width: 25%;
   }
 `;

@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   border-bottom: 1px #bebebe solid;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -26,7 +26,7 @@ const StyledList = styled.ul`
   list-style: none;
   margin-bottom: 4vh;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     margin-bottom: 0;
   }
 `;
@@ -34,7 +34,7 @@ const StyledListItem = styled.li`
   margin-right: 5vw;
   cursor: pointer;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     margin-left: 2vw;
     margin-right: 0;
   }

@@ -19,6 +19,10 @@ const StyledGridWrapper = styled.div`
   grid-auto-flow: row dense;
   padding: 10px 10px 70px 10px;
 
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    grid-auto-rows: minmax(370px, auto);
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax(310px, auto);
@@ -56,6 +60,10 @@ const StyledImage = styled.div`
     css`
       grid-column-end: span 3;
     `}
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};

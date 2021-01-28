@@ -36,10 +36,10 @@ const StyledContentWrapper = styled.div`
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 800);
 
   const updateWidth = () => {
-    setDesktop(window.innerWidth > 1450);
+    setDesktop(window.innerWidth > 800);
   };
 
   useEffect(() => {

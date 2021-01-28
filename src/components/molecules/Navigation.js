@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
   align-items: center;
   width: 100%;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     padding: 5vh 15vw 0;
   }
 `;
@@ -24,6 +24,7 @@ const StyledContentWrapper = styled.div`
   width: 100%;
   height: 12vh;
   padding: 3vh 10vw;
+  position: relative;
 
   ${({ navContent }) =>
     navContent &&
@@ -32,7 +33,7 @@ const StyledContentWrapper = styled.div`
       justify-content: space-between;
     `}
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     display: flex;
     padding: 0;
     height: 6vh;
@@ -43,8 +44,12 @@ const StyledContentWrapper = styled.div`
 `;
 
 const StyledTitle = styled(Title)`
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    display: none;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    width: 110px;
+    width: auto;
     font-size: 1.6rem;
     padding: 0;
     text-transform: capitalize;
@@ -59,7 +64,7 @@ const StyledLogo = styled.img`
   max-height: 6vh;
   right: 10%;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     height: 100%;
     position: static;
   }
@@ -75,6 +80,10 @@ const StyledList = styled.ul`
   transition: visibility 0.3s 0.1s ease-in-out;
   height: 70%;
 
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    margin: 15% 15% 0;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     visibility: visible;
     width: 95%;
@@ -87,6 +96,7 @@ const StyledList = styled.ul`
 
 const StyledButton = styled(Button)`
   margin: 0 auto;
+  max-width: fit-content;
 `;
 
 const StyledListItem = styled.li`
@@ -97,6 +107,16 @@ const StyledListItem = styled.li`
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #343434;
+
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    padding: 6vh 0;
+    margin-bottom: 6vh;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 6vh 0;
+    margin-bottom: 6vh;
+  }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
     padding: 0 5% 0 0;
@@ -120,20 +140,20 @@ const StyledListItemLink = styled.a`
     color: ${({ theme }) => theme.colors.blue};
   }
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     width: 100%;
   }
 `;
 
 const StyledListWrapper = styled.nav`
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: hsla(0, 0%, 0%, 1);
   position: ${({ isActive }) => (isActive ? 'fixed' : 'absolute')};
   z-index: 0;
   top: 0;
   left: 0;
-  transform: translateY(-100vh);
+  transform: translateY(-110vh);
   transition: all 0.3s 0.1s ease-in-out;
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -155,13 +175,13 @@ const StyledListWrapper = styled.nav`
 
 const Navigation = () => {
   const [isVisible, setVisible] = useState(false);
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1311);
   const tl = gsap.timeline({ defaults: { ease: 'power3.easeOut' } });
 
   const clickFn = () => setVisible(!isVisible);
 
   const updateWidth = () => {
-    setDesktop(window.innerWidth > 1450);
+    setDesktop(window.innerWidth > 1311);
   };
 
   useEffect(() => {
@@ -200,10 +220,10 @@ const Navigation = () => {
                 </StyledListItemLink>
               </StyledListItem>
             )}
+            {!isDesktop && (
+              <StyledButton onClick={() => handleClick('form')}>Umów jazdę próbną</StyledButton>
+            )}
           </StyledList>
-          {!isDesktop && (
-            <StyledButton onClick={() => handleClick('form')}>Umów jazdę próbną</StyledButton>
-          )}
         </StyledListWrapper>
       </StyledContentWrapper>
       <StyledContentWrapper navSubtitle>

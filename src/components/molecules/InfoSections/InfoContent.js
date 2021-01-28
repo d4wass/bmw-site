@@ -25,12 +25,17 @@ const infoContent = [
   },
   {
     title: '05',
-    content: 'Publiczne szybkie ładowanie od 10 do 80% w mniej niż 40 minut',
+    content: 'Publiczne szybkie ładowanie od 10 do 80% w mniej niż 40 minut',
   },
 ];
 
 const StyledContentWrapper = styled.div`
   padding: 8vh 10vw;
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 10vh 15vw;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     display: flex;
     flex-direction: column;

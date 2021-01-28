@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   padding: 21% 8% 7% 8%;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0 15vw;
   }
 `;
@@ -36,7 +36,7 @@ const StyledWrapper = styled.div`
 const StyledSection = styled.div`
   padding-top: 25%;
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     display: flex;
     justify-content: flex-start;
     padding: 6vh 0 6vw 0;

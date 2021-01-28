@@ -14,6 +14,14 @@ const Paragraph = styled.p`
       font-weight: ${({ theme }) => theme.font.weight.bold};
       color: ${({ theme }) => theme.colors.footer.links};
     `}
+
+  ${({ info }) =>
+    info &&
+    css`
+      @media ${({ theme }) => theme.breakpoints.tablet} {
+        text-align: justify;
+      }
+    `}
 `;
 
 export default Paragraph;

@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   padding: ${({ formStyle }) => (formStyle ? '0 10vw' : '0')};
 
-  @media ${({ theme }) => theme.breakpoints.desktop} {
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     flex-direction: row-reverse;
     justify-content: center;
     padding: 180px 0;
@@ -25,9 +25,17 @@ const StyledWrapper = styled.div`
         flex-direction: column;
         padding: 90px;
         box-shadow: 3px 3px 60px rgba(0, 0, 0, 0.1);
-        max-width: 42vw;
+        max-width: 50vw;
         position: relative;
         z-index: 2;
+      `}
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktop} {
+    ${({ formStyle }) =>
+      formStyle &&
+      css`
+        max-width: 42vw;
       `}
   }
 `;
@@ -63,16 +71,18 @@ const FromSection = () => {
   };
 
   return (
-    <StyledWrapper className="form-section" ref={wrapper}>
+    <>
       {isSend && <ThanksInfo handleClose={handleSend} />}
-      <FormImage />
-      <StyledWrapper formStyle id="form">
-        <FormSectionContent />
-        <Title formStyle>Wypełnij formularz swoimi danymi.</Title>
-        <Form handleSend={handleSend} />
+      <StyledWrapper className="form-section" ref={wrapper}>
+        <FormImage />
+        <StyledWrapper formStyle id="form">
+          <FormSectionContent />
+          <Title formStyle>Wypełnij formularz swoimi danymi.</Title>
+          <Form handleSend={handleSend} />
+        </StyledWrapper>
+        <FormImage second />
       </StyledWrapper>
-      <FormImage second />
-    </StyledWrapper>
+    </>
   );
 };
 

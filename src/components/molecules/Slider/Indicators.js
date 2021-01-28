@@ -9,6 +9,10 @@ const StyledWrapper = styled.div`
   bottom: 5%;
   z-index: 2;
 
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    left: 41%;
+  }
+
   @media ${({ theme }) => theme.breakpoints.desktop} {
     width: 20%;
     left: 15%;
