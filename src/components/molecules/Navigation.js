@@ -54,6 +54,7 @@ const StyledTitle = styled(Title)`
     padding: 0;
     text-transform: capitalize;
     margin-right: 10%;
+    display: block;
   }
 `;
 
