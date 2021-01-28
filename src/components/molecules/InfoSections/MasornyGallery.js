@@ -15,11 +15,11 @@ const StyledGridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5px;
-  grid-auto-rows: minmax(115px, auto);
+  grid-auto-rows: minmax(130px, auto);
   grid-auto-flow: row dense;
   padding: 10px 10px 70px 10px;
 
-  @media ${({ theme }) => theme.breakpoints.tablet} {
+  @media ${({ theme }) => theme.breakpoints.mobile} {
     grid-auto-rows: minmax(370px, auto);
   }
 
@@ -61,13 +61,11 @@ const StyledImage = styled.div`
       grid-column-end: span 3;
     `}
 
-  @media ${({ theme }) => theme.breakpoints.tablet} {
+  @media ${({ theme }) => theme.breakpoints.mobile} {
     background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
   }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    background-image: ${({ imageDesktop }) => `url(${imageDesktop})`};
-
     ${({ span1 }) =>
       span1 &&
       css`

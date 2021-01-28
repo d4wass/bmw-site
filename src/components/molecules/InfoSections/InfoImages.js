@@ -78,7 +78,7 @@ const StyledImageWrapper = styled.div`
   ${({ first }) =>
     first &&
     css`
-      height: ${({ reverse }) => (reverse ? '240px' : '110px')};
+      height: ${({ reverse }) => (reverse ? '300px' : '200px')};
       width: ${({ reverse }) => (reverse ? '60vw' : '40vw')};
       background-size: cover;
       align-self: flex-end;
@@ -87,7 +87,7 @@ const StyledImageWrapper = styled.div`
   ${({ second }) =>
     second &&
     css`
-      height: ${({ reverse }) => (reverse ? '110px' : '240px')};
+      height: ${({ reverse }) => (reverse ? '200px' : '300px')};
       width: ${({ reverse }) => (reverse ? '40vw' : '60vw')};
       margin-left: 10px;
       background-size: cover;

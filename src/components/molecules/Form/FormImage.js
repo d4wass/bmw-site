@@ -43,6 +43,10 @@ const StyledImage = styled.img`
   left: ${({ second }) => (second ? 'none' : '-33%')};
   right: ${({ second }) => second && 0};
 
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    height: 23vh;
+  }
+
   @media ${({ theme }) => theme.breakpoints.tablet} {
     left: ${({ second }) => (second ? 'none' : '-120px')};
     height: 25vh;
