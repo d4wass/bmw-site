@@ -6,6 +6,14 @@ const Title = styled.h1`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme }) => theme.colors.black};
 
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    ${({ info }) =>
+      info &&
+      css`
+        width: 60vw;
+      `}
+  }
+
   @media ${({ theme }) => theme.breakpoints.tablet} {
     ${({ header }) =>
       header &&
@@ -53,7 +61,7 @@ const Title = styled.h1`
   ${({ info }) =>
     info &&
     css`
-      width: 60vw;
+      width: 100%
       line-height: 2.8rem;
       margin: 25px 0;
     `}

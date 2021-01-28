@@ -16,6 +16,10 @@ const StyledWrapper = styled.div`
 const StyledTitle = styled(Title)`
   display: inline-flex;
   margin-bottom: 30px;
+  font-size: 2.1rem;
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    font-size: 2.4rem;
+  }
 `;
 
 const StyledSpan = styled.span`
@@ -23,7 +27,7 @@ const StyledSpan = styled.span`
     small &&
     css`
       font-size: 1.2rem;
-      margin: 6px;
+      margin: 0 6px;
     `}
 `;
 

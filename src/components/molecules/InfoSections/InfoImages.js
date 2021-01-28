@@ -13,7 +13,7 @@ import fourthImageDesk from 'assets/image/foto2_2@2x_Desk.png';
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   margin-bottom: ${({ reverse }) => reverse && '60px'};
 
