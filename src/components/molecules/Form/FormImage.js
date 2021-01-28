@@ -49,8 +49,8 @@ const StyledImage = styled.img`
   }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
-    left: ${({ second }) => (second ? '-55px' : '-26px')};
-    height: 50%;
+    left: 15px;
+    height: 40%;
   }
 `;
 
