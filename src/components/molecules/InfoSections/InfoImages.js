@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
   margin-bottom: ${({ reverse }) => reverse && '60px'};
 
   @media ${({ theme }) => theme.breakpoints.tablet} {
-    height: 70vh;
+    height: 90vh;
   }
 
   @media ${({ theme }) => theme.breakpoints.desktop} {
@@ -38,7 +38,7 @@ const StyledImageWrapper = styled.div`
       first &&
       css`
         height: ${({ reverse }) => (reverse ? '550px' : '360px')};
-        width: ${({ reverse }) => (reverse ? '70vw' : '30vw')};
+        width: ${({ reverse }) => (reverse ? '65vw' : '35vw')};
         background-size: cover;
         align-self: flex-end;
       `}
@@ -47,7 +47,7 @@ const StyledImageWrapper = styled.div`
       second &&
       css`
         height: ${({ reverse }) => (reverse ? '360px' : '550px')};
-        width: ${({ reverse }) => (reverse ? '30vw' : '70vw')};
+        width: ${({ reverse }) => (reverse ? '35vw' : '65vw')};
         margin-left: 10px;
         background-size: cover;
       `}
@@ -79,7 +79,7 @@ const StyledImageWrapper = styled.div`
     first &&
     css`
       height: ${({ reverse }) => (reverse ? '240px' : '110px')};
-      width: ${({ reverse }) => (reverse ? '70vw' : '30vw')};
+      width: ${({ reverse }) => (reverse ? '60vw' : '40vw')};
       background-size: cover;
       align-self: flex-end;
     `}
@@ -88,7 +88,7 @@ const StyledImageWrapper = styled.div`
     second &&
     css`
       height: ${({ reverse }) => (reverse ? '110px' : '240px')};
-      width: ${({ reverse }) => (reverse ? '30vw' : '70vw')};
+      width: ${({ reverse }) => (reverse ? '40vw' : '60vw')};
       margin-left: 10px;
       background-size: cover;
     `}
